@@ -1,0 +1,2 @@
+ContainerImageInventory
+| where Image contains “miner” and Running == 1

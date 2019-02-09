@@ -1,0 +1,2 @@
+VMConnection
+| where DestinationPort == 3012 and DestinationIp == “168.61.212.228”

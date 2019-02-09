@@ -1,0 +1,6 @@
+MiscEvents
+| where ActionType == “PnpDeviceConnected”
+| extend ParsedFields=parse_json(AdditionalFields)
+| project ClassName=tostring(ParsedFields.ClassName), DeviceDescription=tostring(ParsedFields.DeviceDescription),
+DeviceId=tostring(ParsedFields.DeviceId), VendorIds=tostring(ParsedFields.VendorIds), MachineId, ComputerName, EventTime
+| where ClassName contains “drive” or ClassName contains “usb”

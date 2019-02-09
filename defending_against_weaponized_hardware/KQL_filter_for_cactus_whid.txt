@@ -1,0 +1,1 @@
+| where DeviceId == @”USB\VID_1B4F&PID_9208\HIDFG”

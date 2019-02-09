@@ -1,0 +1,3 @@
+ServiceMapProcess_CL
+| where ExecutableName_s contains “miner”
+| project Computer, CommandLine_s
