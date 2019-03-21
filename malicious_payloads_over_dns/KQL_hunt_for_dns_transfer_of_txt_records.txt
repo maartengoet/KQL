@@ -1,0 +1,3 @@
+Event
+| where EventLog == "Microsoft-Windows-DNS-Client/Operational"
+| where RenderedDescription contains "type 16"
