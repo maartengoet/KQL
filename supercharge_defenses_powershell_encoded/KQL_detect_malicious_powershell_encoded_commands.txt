@@ -1,0 +1,15 @@
+SecurityEvent 
+| where EventID == "4688" 
+| where (CommandLine contains " -e JAB" 
+      or CommandLine contains " -enc JAB" 
+      or CommandLine contains " -encodedcommand JAB" 
+      or CommandLine endswith " BA^J e-" 
+      or CommandLine contains " -e SUVYI" 
+      or CommandLine contains " -e aWV4I" 
+      or CommandLine contains " -e SQBFAFgA" 
+      or CommandLine contains " -e aQBlAHgA" 
+      or CommandLine contains " -enc SUVYI" 
+      or CommandLine contains " -enc aWV4I" 
+      or CommandLine contains " -enc SQBFAFgA" 
+      or CommandLine contains " -enc aQBlAHgA" 
+and not (CommandLine contains " -ExecutionPolicy remotesigned "))
